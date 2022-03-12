@@ -13,7 +13,7 @@
         <button class="btn btn-secondary" @click.prevent="addListaProdutos">Adicionar</button>
       </div>
 
-      <div class="w-30 m-auto text-center border p-4">
+      <div class="carrinho w-30 m-auto text-center border p-4">
         <h1>Carrinho de Compras</h1>
 
         <div class="card shadow w-25 m-auto p-3" v-for="(item, key) in carrinho" :key="key">
@@ -160,5 +160,6 @@ export default {
   width: 100%;
   border: 2px solid black;
 }
+
 
 </style>
