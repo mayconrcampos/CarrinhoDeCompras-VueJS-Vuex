@@ -50,6 +50,11 @@ export default createStore({
   },
   actions: {
   },
+  getters: {
+    produto(state){
+      return state.produto
+    }
+  },
   modules: {
   }
 })

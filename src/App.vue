@@ -13,6 +13,8 @@
         <button class="btn btn-secondary" @click.prevent="addListaProdutos">Adicionar</button>
       </div>
 
+      {{produto}}--{{$store.getters.produto}}
+
       <div class="carrinho w-30 m-auto text-center border p-4">
         <h1>Carrinho de Compras</h1>
 
@@ -55,6 +57,7 @@
         </div>
       </div>
 
+
     </div>
  
 
@@ -63,14 +66,17 @@
 </template>
 
 <script>
+import { /*mapActions, mapMutations, mapState, mapGetters*/ mapState} from "vuex"
+
 
 
 export default {
   name: 'App',
   components: {
-   
   },
   computed: {
+    //...mapGetters(["id"]),
+    ...mapState({produto: state => state.produto}),
 
     id: {
       get(){
